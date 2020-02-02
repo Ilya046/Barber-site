@@ -60,8 +60,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 9px;
-  padding-bottom: 11px;
+  padding-top: 8px;
+  padding-bottom: 9px;
 }
 
 .page-header__info-list {
@@ -69,7 +69,8 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
-padding-top: 3px;
+
+  padding-top: 3px;
   display: flex;
   align-items: center;
 }
@@ -114,20 +115,24 @@ padding-top: 3px;
   background-image: url("../img/phone.png");
   background-repeat: no-repeat;
   width: 19px;
-  height:19px;
+
+  height: 19px;
   display: block;
+
   position: absolute;
   top: 13px;
   left: 6px;
-
 }
+
 .page-header__info-item:nth-of-type(2)::before {
   background-image: url("../img/map.png");
   top: 13px;
   left: 12px;
-  width: 14;
-  height: 21;
+
+  width: 14px;
+  height: 21px;
 }
+
 .page-header__info-item:nth-of-type(3)::before {
   background-image: url("../img/clock.png");
   width: 21px;
@@ -151,6 +156,7 @@ padding-top: 3px;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .page-header__info-link:hover {
   color: #985336;
 }
@@ -171,10 +177,29 @@ padding-top: 3px;
   letter-spacing: 0.4px;
 }
 
+.page-header__nav {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.main-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 44px;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+}
+
 .main-menu__link {
   font-size: 20px;
+  display: block;
+  padding: 23px 21px;
+  padding-bottom: 21px;
   letter-spacing: 1px;
-  line-height: 1.5px;
+
+  line-height: 1.5;
   color: #e8e6e6;
   font-weight: 700;
   text-transform: uppercase;
@@ -197,7 +222,9 @@ padding-top: 3px;
 
 .main-menu__link--current {
   color: #2c2c2b;
-  background-color: rgba(152, 83, 55,0.25);
+  background-color: rgba(153, 84, 55, 0.25);
+  border-bottom: 2px solid #995437;
+
 }
 
 .main-menu__link--current:hover {
@@ -265,6 +292,9 @@ padding-top: 3px;
   color: #ffffff;
   font-weight: 700;
   text-align: center;
+  letter-spacing: 0.05em;
+  margin-top: 10px;
+  text-transform: uppercase;
 }
 
 .services__title {
@@ -316,29 +346,64 @@ padding-top: 3px;
   font-family: "Vani", 'Times New Roman', serif;
   text-align: center;
 }
-.container__gallery__img {
-  width: 100%;
-  max-width: 384px;
-  margin: 0 auto;
-}
-.gallery__img {
-  float: left;
-  width: 20%;
-  padding: 0px;
-  box-sizing: border-box;
-  display: flex;
 
+.statistics {
+  background-color: #000000;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../img/bg-2.jpg");
+  padding-top: 56px;
+  padding-bottom: 33px;
 }
-.gallery__img {
-  display: block;
-  max-width: 100%;
-height: auto;
+
+.statistics__list {
+  margin: 0 auto;
+  padding: 0;
+  padding-left: 5px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-. {
-  font-size: 72px;
-    line-height: 95px;
-    font-family: "Vani", 'Times New Roman', serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
+
+.statistics__item {
+  width: 260px;
+}
+
+.statistics__price {
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 5.6px;
+}
+
+.appointment {
+  background-color: #000000;
+}
+
+.appointment__form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.appointment__column {
+  width: 50%;
+}
+
+.appointment__textfield {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.appointment__select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.appointment__datefield {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.appointment__message {
+  width: 100%;
 }
