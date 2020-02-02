@@ -69,7 +69,7 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
-
+padding-top: 3px;
   display: flex;
   align-items: center;
 }
@@ -105,6 +105,52 @@ a {
   letter-spacing: 0.4px;
 }
 
+.page-header__info-item {
+  position: relative;
+}
+
+.page-header__info-item::before {
+  content: "";
+  background-image: url("../img/phone.png");
+  background-repeat: no-repeat;
+  width: 19px;
+  height:19px;
+  display: block;
+  position: absolute;
+  top: 13px;
+  left: 6px;
+
+}
+.page-header__info-item:nth-of-type(2)::before {
+  background-image: url("../img/map.png");
+  top: 13px;
+  left: 12px;
+  width: 14;
+  height: 21;
+}
+.page-header__info-item:nth-of-type(3)::before {
+  background-image: url("../img/clock.png");
+  width: 21px;
+  height: 21px;
+  top: 29px;
+  left: 6px;
+}
+.page-header__info-item:nth-of-type(4)::before {
+  background-image: url("../img/search.png");
+  top: -10px;
+  left: 10px;
+}
+.page-header__nav {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.main-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .page-header__info-link:hover {
   color: #985336;
 }
@@ -128,10 +174,13 @@ a {
 .main-menu__link {
   font-size: 20px;
   letter-spacing: 1px;
-  line-height: 95px;
+  line-height: 1.5px;
   color: #e8e6e6;
   font-weight: 700;
   text-transform: uppercase;
+  padding: 23px 21px;
+  display: block;
+  padding-bottom: 21px;
 }
 
 .main-menu__link:hover {
@@ -148,6 +197,7 @@ a {
 
 .main-menu__link--current {
   color: #2c2c2b;
+  background-color: rgba(152, 83, 55,0.25);
 }
 
 .main-menu__link--current:hover {
@@ -265,4 +315,30 @@ a {
   color: #ffffff;
   font-family: "Vani", 'Times New Roman', serif;
   text-align: center;
+}
+.container__gallery__img {
+  width: 100%;
+  max-width: 384px;
+  margin: 0 auto;
+}
+.gallery__img {
+  float: left;
+  width: 20%;
+  padding: 0px;
+  box-sizing: border-box;
+  display: flex;
+
+}
+.gallery__img {
+  display: block;
+  max-width: 100%;
+height: auto;
+}
+. {
+  font-size: 72px;
+    line-height: 95px;
+    font-family: "Vani", 'Times New Roman', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
 }
