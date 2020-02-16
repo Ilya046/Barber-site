@@ -211,6 +211,24 @@ a {
 .main-menu__link:hover {
   color: #985336;
 }
+.slider {
+  background-color:#acacac;
+  background-image: radial-gradient(circle, rgb(171,171,171)0%, rgb(155,155,155)100%); 
+}
+.slider__list {
+  width: 1831px;
+list-style: none;
+padding:0px;
+margin: 0 auto;
+}
+.slider__item {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.slider__slogan {
+font-weight: 
+}
 
 .main-menu__link:focus {
   color: #985336;
@@ -413,4 +431,19 @@ a {
   flex-wrap: wrap;
 width: 1920px;
 margin: 0 auto;
+}
+.section-title {
+  text-align:  center;
+  font-family: 'Vani';
+  font-style: normal;
+  font-weight: 400;
+
+}
+.page-gallery__logo {
+  background-repeat: no-repeat;
+  display: block;
+    position: absolute;
+    top: 4212px;
+    left: 1217px;
+
 }
