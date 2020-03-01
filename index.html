@@ -72,56 +72,55 @@
 
   <main class="page-main">
     <h1 class="page-main__title visually-hidden">Barbershop</h1>
+
     <section class="slider">
       <h2 class="section-title visually-hidden">Promotions</h2>
-      <input type="radio" class="slider__input" name="slider-control" id="sliderB">
-      <input type="radio" class="slider__input" name="slider-control" id="sliderf">
+      <div class="container">
+        <input class="slider__input visually-hidden" type="radio" name="slider-control" id="sliderB">
+        <label class="slider__btn-round slider__btn--back" for="sliderB"></label>
+        <input class="slider__input visually-hidden" type="radio" name="slider-control" id="sliderF">
+        <label class="slider__btn-round slider__btn--front" for="sliderF"></label>
+      </div>
 
-      <label class="slider__btn slider__btn--back" for="sliderB">Back</label>
-      <label class="slider__btn slider__btn--front" for="sliderF">Front</label>
-      <label class="slider__btn slider__btn--back">
-        <input class="slider__input" type="radio" name="slider-control">Back
-      </label>
-      <label class="slider__btn slider__btn--front">
-        <input class="slider__input" type="radio" name="slider-control">Front
-      </label>
       <ul class="slider__list">
         <li class="slider__item">
           <p class="slider__slogan">
             <span class="slider__text slider__text--white">welcome to the</span>
             <span class="slider__text slider__text--brown">barbershop</span>
-            <a class="slider_btn slider__btn--rect href=" #"></a>
-
+            <a class="slider__btn slider__btn--rect" href="#">Make An Appointment</a>
           </p>
-          <a class="slider__btn slider__btn--rect" href="#">Make An Appointment</a>
+          <img class="slider__img" src="img/bg-1.jpg" alt="slider_1" width="1831" height="986">
         </li>
       </ul>
     </section>
+
     <section class="about">
-      <h2 class="section-title">About us</h2>
-      <p class="about__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam</p>
-      <ul class="about__list">
-        <li class="about__item">
-          <h3 class="about__title">New Yourk’s №1 Barbershop</h3>
-          <p class="about__text">Sed ut perspiciatis unde omnis iste
-            natus error sit voluptatem
-            accusantium doloremque laudantium.</p>
-        </li>
-        <li class="about__item">
-          <h3 class="about__title">Profeccionals Barbers</h3>
-          <p class="about__text">Sed ut perspiciatis unde omnis iste
-            natus error sit voluptatem
-            accusantium doloremque laudantium.</p>
-        </li>
-        <li class="about__item">
-          <h3 class="about__title">Branded Products</h3>
-          <p class="about__text">Sed ut perspiciatis unde omnis iste
-            natus error sit voluptatem
-            accusantium doloremque laudantium.</p>
-        </li>
-      </ul>
+      <div class="container">
+        <h2 class="section-title">About us</h2>
+        <p class="about__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam</p>
+        <ul class="about__list">
+          <li class="about__item">
+            <h3 class="about__title">New Yourk’s №1 Barbershop</h3>
+            <p class="about__text">Sed ut perspiciatis unde omnis iste
+              natus error sit voluptatem
+              accusantium doloremque laudantium.</p>
+          </li>
+          <li class="about__item">
+            <h3 class="about__title">Profeccionals Barbers</h3>
+            <p class="about__text">Sed ut perspiciatis unde omnis iste
+              natus error sit voluptatem
+              accusantium doloremque laudantium.</p>
+          </li>
+          <li class="about__item">
+            <h3 class="about__title">Branded Products</h3>
+            <p class="about__text">Sed ut perspiciatis unde omnis iste
+              natus error sit voluptatem
+              accusantium doloremque laudantium.</p>
+          </li>
+        </ul>
     </section>
+    </div>
     <section class="statistics">
       <div class="container">
         <h2 class="section-title visually-hidden">Statistics</h2>
@@ -178,7 +177,7 @@
     </section>
     <section class="appointment">
       <div class="container">
-        <h2 class="section-title">Make An Appointment</h2>
+        <h2 class="section-title section-title--white">Make An Appointment</h2>
         <p class="appointment__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam</p>
         <form class="appointment__form" action="#" method="get">
@@ -238,7 +237,7 @@
       </ul>
     </section>
     <section class="reviews">
-      <h2 class="section-title">Our Clients Say</h2>
+      <h2 class="section-title section-title--white">Our Clients Say</h2>
       <p class="reviews__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam</p>
       <label class="reviews__btn reviews__btn--back">
@@ -262,13 +261,9 @@
     </section>
 
     <section class="gallery">
-
-      <div class="container">
-        <h2 class="section-title">Our Gallery</h2>
-        <img class="page-gallery__logo" src="img/mustach.png" alt="mustach logo" width="69" height="19">
-        <p class="gallery__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam</p>
-      </div>
+      <h2 class="section-title">Our Gallery</h2>
+      <p class="gallery__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam</p>
       <div class="gallery__wrapper">
         <img class="gallery__img" width="384" height="384" src="img/1.jpg" alt="Изображение галереи">
         <img class="gallery__img" width="384" height="384" src="img/2.jpg" alt="Изображение галереи">
@@ -280,8 +275,7 @@
         <img class="gallery__img" width="384" height="384" src="img/8.jpg" alt="Изображение галереи">
         <img class="gallery__img" width="384" height="384" src="img/9.jpg" alt="Изображение галереи">
         <img class="gallery__img" width="384" height="384" src="img/10.jpg" alt="Изображение галереи">
-
-        </p>div
+      </div>
     </section>
 
     <section class="prising">
