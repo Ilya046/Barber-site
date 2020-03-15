@@ -224,6 +224,7 @@ a {
   color: #e8e6e6;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: all 0.6s;
 }
 
 .main-menu__link:hover {
@@ -409,6 +410,12 @@ font-weight:
   letter-spacing: 0.025em;
 
   border: 2px solid #985336;
+}
+.slider__btn--rect {
+  color: #ffffff;
+  border: 2px solid #985336;
+
+  transition: all 0.5s;
 }
 
 .slider__btn:focus,
@@ -640,9 +647,9 @@ position: absolute;
   font-size: 24px;
   line-height: 1.5;
   font-family: "Vani", "Times New Roman", serif;
+  text-align: center;
   color: #0b0b0b;
   letter-spacing: 1px;
-  text-align: center;
 }
 
 .barbers__text {
@@ -650,15 +657,17 @@ position: absolute;
 }
 
 .barbers__stars {
-  list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
+
+  list-style: none;
 }
 
 .barbers__star {
   width: 17px;
   height: 17px;
+
   background-image: url("../img/star-fill.png");
 }
 
@@ -718,9 +727,10 @@ position: absolute;
 .services {
   padding-top: 113px;
   padding-bottom: 318px;
+
   background-image: url("../img/man.png"), linear-gradient(to top, transparent, white 64%), url("../img/bg-3.jpg");
-  background-position: center 391px;
   background-repeat: no-repeat;
+  background-position: center 391px;
 }
 
 .services__heading {
@@ -807,62 +817,144 @@ position: absolute;
 .appointment__form {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .appointment__column {
-  width: 50%;
+  width: 48%;
 }
 
 .appointment__textfield {
   box-sizing: border-box;
   width: 100%;
+  padding: 10px;
+
+  color: white;
+
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #c1c1c1;
-  color: white;
 }
 
 .appointment__select {
   box-sizing: border-box;
   width: 100%;
   padding: 10px;
+  padding-bottom: 11px;
+
+  color: white;
+
   background-color: transparent;
   border: none;
-  color: white;
+
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 10px;
-  padding-bottom: 11px;
 }
-.appointment__select-wrapper{
+
+.appointment__select-wrapper {
   position: relative;
 }
-.appointment__select-wrapper::after{
+
+.appointment__select-wrapper::after {
   content: "";
   position: absolute;
-  width: 100%;
+  bottom: 0;
+  left: 0;
 
+  width: 100%;
+  height: 1px;
+
+  background-color: #c1c1c1;
 }
 
 .appointment__datefield {
   box-sizing: border-box;
   width: 100%;
   padding: 7px 10px;
+
+  color: white;
+
+  background-color: transparent;
+  border: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.appointment__select-wrapper--date::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 0;
+
+  width: 50px;
+  height: 90%;
+
+  background-color: black;
+
+  pointer-events: none;
 }
 
 .appointment__message {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+
+  color: white;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #c1c1c1;
+
+  resize: none;
+}
+
+.appointment__btn {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 35px;
+  padding: 15px 20px;
+
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.5;
+  font-family: "Quattrocento Sans", "Arial", sans-serif;
+  color: #ffffff;
+  text-transform: capitalize;
+  letter-spacing: 0.025em;
+
+  background-color: #995437;
+  border: 2.0px solid #6e331a;
+  cursor: pointer;
+}
+
+.appointment__btn-wrapper {
   width: 100%;
 }
 
-.barbers__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.appointment__btn--reset {
+  margin-top: 20px;
 
+  font-size: 20px;
+  line-height: 1.5;
+  color: #995437;
+  text-decoration: underline;
+
+  background-color: transparent;
+  border: none;
+}
+
+.barbers__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .barbers__item {
@@ -874,4 +966,89 @@ position: absolute;
   flex-wrap: wrap;
   width: 1920px;
   margin: 0 auto;
+}
+
+.modal {
+  position: fixed;
+  top: calc(50% - 455px);
+  left: calc(50% - 640px);
+  z-index: 100;
+
+  box-sizing: border-box;
+  padding: 40px 70px;
+
+  box-shadow: 0 0 50px -10px black;
+
+  animation: modalShow 0.4s linear;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+
+  width: 50px;
+  height: 50px;
+
+  background-color: transparent;
+  border: 2px solid #995437;
+  border-radius: 50%;
+
+  transform: rotate(45deg);
+}
+
+.modal__close-btn::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 22px;
+
+  width: 2px;
+  height: 20px;
+
+  background-color: #995437;
+}
+
+.modal__close-btn::after {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 13px;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: #995437;
+}
+
+
+.modal--hide {
+  display: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px #000000 !important;
+  -webkit-text-fill-color: #999999 !important;
+}
+
+@keyframes modalShow {
+  0% {
+    left: -1000px;
+  }
+
+  25% {
+    left: calc(50% - 680px);
+  }
+
+  50% {
+    left: calc(50% - 620px);
+  }
+
+  75% {
+    left: calc(50% - 660px);
+  }
+
+  100% {
+    left: calc(50% - 640px);
+  }
 }
